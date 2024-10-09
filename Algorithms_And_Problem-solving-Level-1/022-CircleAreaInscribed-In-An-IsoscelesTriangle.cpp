@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main()
@@ -11,9 +13,13 @@ int main()
 	cout << "Enter length of base of triangle?\n";
 	cin >> TriangleBase; cout << endl << endl;
 
-	float CircleArea = (3.14 * TriangleBase * TriangleBase * (2 * TriangleSide - TriangleBase)) / (4 * (2 * TriangleSide + TriangleBase));
+	float CircleArea = (3.14 * pow(TriangleBase, 2) * (2 * TriangleSide - TriangleBase)) / ( 4 * (2 * TriangleSide + TriangleBase));
 
-	cout << "Circle area is " << CircleArea << endl;
+	unsigned short FinalResult = floor(CircleArea);
+
+	cout << "Circle area = " << CircleArea << endl;
+	cout << "Final result = " << FinalResult;
+	
 
 	return 0;
 

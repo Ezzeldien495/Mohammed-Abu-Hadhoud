@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main()
@@ -19,7 +21,7 @@ int main()
 
 	float TotalSeconds = Seconds + (Days * 24 * 60 * 60) + (Hours * 60 * 60) + (Minutes * 60);
 
-	cout << TotalSeconds << " Seconds.";
+	cout << round(TotalSeconds) << " Seconds.";
 
 	return 0;
 

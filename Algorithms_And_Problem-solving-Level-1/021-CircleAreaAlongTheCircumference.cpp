@@ -1,16 +1,21 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main()
 {
-	short CircleCircumference;
+	unsigned short CircleCircumference;
 
 	cout << "Enter circle circumference?\n";
 	cin >> CircleCircumference; cout << endl << endl;
 
-	float CircleArea = (CircleCircumference * CircleCircumference) / (4 * 3.14);
+	float CircleArea = pow(CircleCircumference, 2) / (4 * 3.14);
+	unsigned short FinalResult = floor(CircleArea);
 
-	cout << "Circle area is " << CircleArea << endl;
+	cout << "Circle area = " << CircleArea << endl;
+	cout << "Final result = " << FinalResult;
+
 
 	return 0;
 

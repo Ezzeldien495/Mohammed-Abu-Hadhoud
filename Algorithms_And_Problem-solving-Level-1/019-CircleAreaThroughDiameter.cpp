@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main()
@@ -8,9 +10,12 @@ int main()
 	cout << "Enter circle diameter?\n";
 	cin >> CircleDiameter; cout << endl << endl;
 
-	float CircleArea = (3.14 * CircleDiameter * CircleDiameter) / 4;
+	float CircleArea = (3.14 * pow(CircleDiameter, 2)) / 4;
+	unsigned short FinalResult = ceil(CircleArea);
 
-	cout << "Circle area is " << CircleArea << endl;
+
+	cout << "Circle area = " << CircleArea << endl;
+	cout << "Final result = " << FinalResult; 
 
 	return 0;
 
